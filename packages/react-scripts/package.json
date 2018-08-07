@@ -1,5 +1,5 @@
 {
-  "name": "react-scripts",
+  "name": "@gxl/react-scripts",
   "version": "1.1.4",
   "description": "Configuration and scripts for Create React App.",
   "repository": "facebookincubator/create-react-app",
@@ -18,7 +18,7 @@
     "utils"
   ],
   "bin": {
-    "react-scripts": "./bin/react-scripts.js"
+    "gxl-react-scripts": "./bin/react-scripts.js"
   },
   "dependencies": {
     "autoprefixer": "7.1.6",
