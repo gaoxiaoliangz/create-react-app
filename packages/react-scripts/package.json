@@ -1,14 +1,14 @@
 {
   "name": "@gxl/react-scripts",
-  "version": "1.1.5",
+  "version": "1.1.7",
   "description": "Configuration and scripts for Create React App.",
-  "repository": "facebookincubator/create-react-app",
+  "repository": "gaoxiaoliangz/create-react-app",
   "license": "MIT",
   "engines": {
     "node": ">=6"
   },
   "bugs": {
-    "url": "https://github.com/facebookincubator/create-react-app/issues"
+    "url": "https://github.com/gaoxiaoliangz/create-react-app/issues"
   },
   "files": [
     "bin",
