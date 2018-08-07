@@ -110,6 +110,7 @@ module.exports = {
       // Support React Native Web
       // https://www.smashingmagazine.com/2016/08/a-glimpse-into-the-future-with-react-native-for-web/
       'react-native': 'react-native-web',
+      '@': paths.appSrc,
     },
     plugins: [
       // Prevents users from importing files from outside of src/ (or node_modules/).
@@ -232,6 +233,34 @@ module.exports = {
                         ],
                       },
                     },
+                  ],
+                },
+                extractTextPluginOptions
+              )
+            ),
+            // Note: this won't work without `new ExtractTextPlugin()` in `plugins`.
+          },
+          {
+            test: /\.scss$/,
+            loader: ExtractTextPlugin.extract(
+              Object.assign(
+                {
+                  fallback: {
+                    loader: require.resolve('style-loader'),
+                    options: {
+                      hmr: false,
+                    },
+                  },
+                  use: [
+                    {
+                      loader: require.resolve('css-loader'),
+                      options: {
+                        importLoaders: 1,
+                        minimize: true,
+                        sourceMap: shouldUseSourceMap,
+                      },
+                    },
+                    require.resolve('sass-loader'), // compiles Sass to CSS, using Node Sass by default
                   ],
                 },
                 extractTextPluginOptions

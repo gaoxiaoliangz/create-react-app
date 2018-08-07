@@ -104,6 +104,7 @@ module.exports = {
       // Support React Native Web
       // https://www.smashingmagazine.com/2016/08/a-glimpse-into-the-future-with-react-native-for-web/
       'react-native': 'react-native-web',
+      '@': paths.appSrc,
     },
     plugins: [
       // Prevents users from importing files from outside of src/ (or node_modules/).
@@ -189,6 +190,7 @@ module.exports = {
                 loader: require.resolve('css-loader'),
                 options: {
                   importLoaders: 1,
+                  sourceMap: true,
                 },
               },
               {
@@ -211,6 +213,20 @@ module.exports = {
                   ],
                 },
               },
+            ],
+          },
+          {
+            test: /\.scss$/,
+            use: [
+              require.resolve('style-loader'), // creates style nodes from JS strings
+              {
+                loader: require.resolve('css-loader'),
+                options: {
+                  importLoaders: 1,
+                  sourceMap: true,
+                },
+              },
+              require.resolve('sass-loader'), // compiles Sass to CSS, using Node Sass by default
             ],
           },
           // "file" loader makes sure those assets get served by WebpackDevServer.
