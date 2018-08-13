@@ -1,6 +1,7 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.scss';
+import React, { Component } from 'react'
+import logo from './logo.svg'
+import './App.scss'
+import Content from './Content'
 
 class App extends Component {
   render() {
@@ -12,10 +13,11 @@ class App extends Component {
         </header>
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
+          <Content />
         </p>
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App

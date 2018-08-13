@@ -1,5 +1,19 @@
 # react-scripts
 
+This is a fork of [Create React App](https://github.com/facebookincubator/create-react-app). Added features includes:
+
+- scss support
+- css modules support (filename ends with `.module.css` or `.module.scss` will have css modules support)
+- alias `@` -> `src`
+- css source map support in development
+
+
+You can create your react project using
+
+```
+create-react-app app_name --scripts-version=@gxl/react-scripts
+```
+
 This package includes scripts and configuration used by [Create React App](https://github.com/facebookincubator/create-react-app).<br>
 Please refer to its documentation:
 
