@@ -60,6 +60,7 @@ module.exports = {
   appNodeModules: resolveApp('node_modules'),
   publicUrl: getPublicUrl(resolveApp('package.json')),
   servedPath: getServedPath(resolveApp('package.json')),
+  customConfig: resolveApp('config.js'),
 };
 
 // @remove-on-eject-begin
@@ -83,6 +84,7 @@ module.exports = {
   // These properties only exist before ejecting:
   ownPath: resolveOwn('.'),
   ownNodeModules: resolveOwn('node_modules'), // This is empty on npm 3
+  customConfig: resolveApp('config.js'),
 };
 
 const ownPackageJson = require('../package.json');
@@ -113,6 +115,7 @@ if (
     // These properties only exist before ejecting:
     ownPath: resolveOwn('.'),
     ownNodeModules: resolveOwn('node_modules'),
+    customConfig: resolveApp('template/config.js'),
   };
 }
 // @remove-on-eject-end
