@@ -3,7 +3,7 @@ import styles from './Content.module.css'
 import styles2 from './Content.module.scss'
 import './Content.scss'
 
-const Content = props => {
+const Content = () => {
   return (
     <div className="wrap">
       <div className={styles.content}>
