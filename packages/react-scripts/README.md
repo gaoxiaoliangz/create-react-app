@@ -6,7 +6,7 @@ This is a fork of [Create React App](https://github.com/facebookincubator/create
 - css modules support (filename ends with `.module.css` or `.module.scss` will have css modules support)
 - alias `@` -> `src`
 - css source map support in development
-
+- add config.js to support customizing webpack and webpack dev server
 
 You can create your react project using
 
