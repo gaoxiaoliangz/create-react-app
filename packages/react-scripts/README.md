@@ -1,4 +1,4 @@
-# @gxl/react-scripts
+# ✨ @gxl/react-scripts ✨
 
 This is a fork of [Create React App](https://github.com/facebookincubator/create-react-app). Added features includes:
 
