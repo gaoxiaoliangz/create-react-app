@@ -1,27 +1,28 @@
-@import "~@/styles/vars";
-
-.App {
+.app {
   text-align: center;
 }
 
-.App-logo {
+.logo {
   animation: App-logo-spin infinite 20s linear;
   height: 80px;
 }
 
-.App-header {
+.header {
   background-color: #222;
-  height: 150px;
   padding: 20px;
-  color: $primary-color;
+  color: #fff;
 }
 
-.App-title {
+.title {
   font-size: 1.5em;
 }
 
-.App-intro {
+.intro {
   font-size: large;
+  text-align: left;
+  padding: 20px;
+  max-width: 700px;
+  margin: auto;
 }
 
 @keyframes App-logo-spin {
