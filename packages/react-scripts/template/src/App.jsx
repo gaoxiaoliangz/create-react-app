@@ -1,17 +1,17 @@
 import React, { Component } from 'react'
 import logo from './logo.svg'
-import styles from './App.module.scss'
+import './App.module.scss'
 
 class App extends Component {
   render() {
     return (
-      <div className={styles.app}>
-        <header className={styles.header}>
-          <img src={logo} className={styles.logo} alt="logo" />
-          <h1 className={styles.title}>@gxl/react-scripts</h1>
+      <div styleName="app">
+        <header styleName="header">
+          <img src={logo} styleName="logo" alt="logo" />
+          <h1 styleName="title">@gxl/react-scripts</h1>
           <p>A configurable version of create react app</p>
         </header>
-        <div className={styles.intro}>
+        <div styleName="intro">
           <p>
             To get started, edit <code>src/App.js</code> and save to reload.
           </p>

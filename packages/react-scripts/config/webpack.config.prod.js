@@ -20,6 +20,7 @@ const eslintFormatter = require('react-dev-utils/eslintFormatter');
 const ModuleScopePlugin = require('react-dev-utils/ModuleScopePlugin');
 const paths = require('./paths');
 const getClientEnvironment = require('./env');
+const scopedClassName = '[hash:base64:10]';
 
 // Webpack uses `publicPath` to determine where the app is being served from.
 // It requires a trailing slash, or the file assets will get an incorrect path.
@@ -178,6 +179,22 @@ module.exports = {
               babelrc: false,
               presets: [require.resolve('babel-preset-react-app')],
               // @remove-on-eject-end
+              plugins: [
+                require.resolve('babel-plugin-lodash'),
+                [
+                  require.resolve('babel-plugin-react-css-modules'),
+                  {
+                    generateScopedName: scopedClassName,
+                    handleMissingStyleName: 'throw',
+                    filetypes: {
+                      '.scss': {
+                        syntax: require.resolve('postcss-scss'),
+                        plugins: [require.resolve('postcss-nested')],
+                      },
+                    },
+                  },
+                ],
+              ],
               compact: true,
             },
           },
@@ -201,7 +218,7 @@ module.exports = {
                         minimize: true,
                         sourceMap: shouldUseSourceMap,
                         modules: true,
-                        localIdentName: '[hash:base64:10]',
+                        localIdentName: scopedClassName,
                       },
                     },
                     {
@@ -251,7 +268,7 @@ module.exports = {
                         minimize: true,
                         sourceMap: shouldUseSourceMap,
                         modules: true,
-                        localIdentName: '[hash:base64:10]',
+                        localIdentName: scopedClassName,
                       },
                     },
                     require.resolve('sass-loader'), // compiles Sass to CSS, using Node Sass by default

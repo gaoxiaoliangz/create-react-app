@@ -19,6 +19,7 @@ const eslintFormatter = require('react-dev-utils/eslintFormatter');
 const ModuleScopePlugin = require('react-dev-utils/ModuleScopePlugin');
 const getClientEnvironment = require('./env');
 const paths = require('./paths');
+const scopedClassName = '[local]--[hash:base64:5]';
 
 // Webpack uses `publicPath` to determine where the app is being served from.
 // In development, we always serve from the root. This makes config easier.
@@ -171,6 +172,21 @@ module.exports = {
               babelrc: false,
               presets: [require.resolve('babel-preset-react-app')],
               // @remove-on-eject-end
+              plugins: [
+                [
+                  require.resolve('babel-plugin-react-css-modules'),
+                  {
+                    generateScopedName: scopedClassName,
+                    handleMissingStyleName: 'ignore',
+                    filetypes: {
+                      '.scss': {
+                        syntax: require.resolve('postcss-scss'),
+                        plugins: [require.resolve('postcss-nested')],
+                      },
+                    },
+                  },
+                ],
+              ],
               // This is a feature of `babel-loader` for webpack (not Babel itself).
               // It enables caching results in ./node_modules/.cache/babel-loader/
               // directory for faster rebuilds.
@@ -188,7 +204,7 @@ module.exports = {
                   importLoaders: 1,
                   sourceMap: true,
                   modules: true,
-                  localIdentName: '[local]--[hash:base64:5]',
+                  localIdentName: scopedClassName,
                 },
               },
               {
@@ -224,7 +240,7 @@ module.exports = {
                   importLoaders: 1,
                   sourceMap: true,
                   modules: true,
-                  localIdentName: '[local]--[hash:base64:5]',
+                  localIdentName: scopedClassName,
                 },
               },
               require.resolve('sass-loader'), // compiles Sass to CSS, using Node Sass by default
