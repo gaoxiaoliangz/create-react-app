@@ -1,6 +1,6 @@
 {
   "name": "@gxl/react-scripts",
-  "version": "1.4.0",
+  "version": "1.4.2",
   "description": "A configurable version of create react app",
   "repository": "gaoxiaoliangz/create-react-app",
   "license": "MIT",
