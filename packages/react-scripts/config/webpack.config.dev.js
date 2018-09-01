@@ -173,19 +173,7 @@ module.exports = {
               presets: [require.resolve('babel-preset-react-app')],
               // @remove-on-eject-end
               plugins: [
-                [
-                  require.resolve('babel-plugin-react-css-modules'),
-                  {
-                    generateScopedName: scopedClassName,
-                    handleMissingStyleName: 'ignore',
-                    filetypes: {
-                      '.scss': {
-                        syntax: require.resolve('postcss-scss'),
-                        plugins: [require.resolve('postcss-nested')],
-                      },
-                    },
-                  },
-                ],
+                require.resolve('styled-jsx/babel'),
               ],
               // This is a feature of `babel-loader` for webpack (not Babel itself).
               // It enables caching results in ./node_modules/.cache/babel-loader/

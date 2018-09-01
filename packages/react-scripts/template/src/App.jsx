@@ -1,17 +1,16 @@
 import React, { Component } from 'react'
 import logo from './logo.svg'
-import './App.module.scss'
 
 class App extends Component {
   render() {
     return (
-      <div styleName="app">
-        <header styleName="header">
-          <img src={logo} styleName="logo" alt="logo" />
-          <h1 styleName="title">@gxl/react-scripts</h1>
+      <div className="app">
+        <header className="header">
+          <img src={logo} className="logo" alt="logo" />
+          <h1 className="title">@gxl/react-scripts</h1>
           <p>A configurable version of create react app</p>
         </header>
-        <div styleName="intro">
+        <div className="intro">
           <p>
             To get started, edit <code>src/App.js</code> and save to reload.
           </p>
@@ -38,6 +37,46 @@ class App extends Component {
           </ul>
           <a href="https://github.com/gaoxiaoliangz/create-react-app/tree/master/packages/react-scripts">Read the full documentation</a>
         </div>
+        <style jsx global>{`
+          body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+          }
+        `}</style>
+        <style jsx>{`
+          .app {
+            text-align: center;
+          }
+          
+          .logo {
+            animation: App-logo-spin infinite 20s linear;
+            height: 80px;
+          }
+          
+          .header {
+            background-color: #222;
+            padding: 20px;
+            color: #fff;
+          }
+          
+          .title {
+            font-size: 1.5em;
+          }
+          
+          .intro {
+            font-size: large;
+            text-align: left;
+            padding: 20px;
+            max-width: 700px;
+            margin: auto;
+          }
+          
+          @keyframes App-logo-spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+          }          
+        `}</style>
       </div>
     )
   }

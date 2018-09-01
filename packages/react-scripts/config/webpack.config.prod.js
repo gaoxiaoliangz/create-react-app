@@ -181,19 +181,7 @@ module.exports = {
               // @remove-on-eject-end
               plugins: [
                 require.resolve('babel-plugin-lodash'),
-                [
-                  require.resolve('babel-plugin-react-css-modules'),
-                  {
-                    generateScopedName: scopedClassName,
-                    handleMissingStyleName: 'throw',
-                    filetypes: {
-                      '.scss': {
-                        syntax: require.resolve('postcss-scss'),
-                        plugins: [require.resolve('postcss-nested')],
-                      },
-                    },
-                  },
-                ],
+                require.resolve('styled-jsx/babel'),
               ],
               compact: true,
             },

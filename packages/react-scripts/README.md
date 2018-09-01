@@ -2,11 +2,12 @@
 
 This is a fork of [Create React App](https://github.com/facebookincubator/create-react-app). Added features includes:
 
+- [styled-jsx](https://github.com/zeit/styled-jsx) support
 - scss support
 - css modules support (filename ends with `.module.css` or `.module.scss` will have css modules enabled)
-- alias `@` -> `src`
 - css source map support in development
 - added config.js to support customizing webpack and webpack dev server
+- alias `@` -> `src`
 
 You can create your react project using
 
