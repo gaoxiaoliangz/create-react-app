@@ -1,12 +1,13 @@
 {
   "name": "@gxl/react-scripts",
-  "version": "1.4.3",
+  "version": "1.4.4",
   "description": "A configurable version of create react app",
   "repository": "gaoxiaoliangz/create-react-app",
   "license": "MIT",
   "engines": {
     "node": ">=6"
   },
+  "main": "index.js",
   "bugs": {
     "url": "https://github.com/gaoxiaoliangz/create-react-app/issues"
   },
@@ -53,6 +54,7 @@
     "promise": "8.0.1",
     "raf": "3.4.0",
     "react-dev-utils": "^5.0.2",
+    "react-hot-loader": "^4.3.6",
     "resolve": "1.6.0",
     "sass-loader": "^7.1.0",
     "style-loader": "0.19.0",
