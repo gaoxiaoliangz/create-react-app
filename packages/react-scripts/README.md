@@ -2,8 +2,8 @@
 
 This is a fork of [Create React App](https://github.com/facebookincubator/create-react-app). Added features includes:
 
-- [styled-jsx](https://github.com/zeit/styled-jsx) support
-- scss support
+- [styled-jsx](https://github.com/zeit/styled-jsx) supporou
+- scss supporout
 - css modules support (filename ends with `.module.css` or `.module.scss` will have css modules enabled)
 - css source map support in development
 - added config.js to support customizing webpack and webpack dev server
@@ -52,3 +52,6 @@ Please refer to its documentation:
 1.4.4
 - add util function `injectBabelPlugin`, `injectModuleRule` and `injectWebpackPlugin`
 - add react-hot-loader
+
+1.4.5
+- fixed an issue with `output.path`
