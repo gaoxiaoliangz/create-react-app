@@ -37,7 +37,7 @@ Please refer to its documentation:
 - add config.js to customize webpack and dev server
 
 1.3.8
-- merge react-scripts 1.1.5
+- merged create-react-app/react-scripts 1.1.5
 
 1.4.2
 - add babel-plugin-react-css-modules
@@ -55,3 +55,8 @@ Please refer to its documentation:
 
 1.4.6
 - fixed an issue with `output.path`
+
+2.0.0
+- merged create-react-app/react-scripts 2.0.5
+- removed built-in support for styled-jsx
+- use the same template as the official one
