@@ -15,7 +15,7 @@ You can create your react project using
 create-react-app app_name --scripts-version=@gxl/react-scripts
 ```
 
-This package includes scripts and configuration used by [Create React App](https://github.com/facebookincubator/create-react-app).<br>
+This package includes scripts and configuration used by [Create React App](https://github.com/facebook/create-react-app).<br>
 Please refer to its documentation:
 
 * [Getting Started](https://github.com/facebookincubator/create-react-app/blob/master/README.md#getting-started) – How to create a new app.
