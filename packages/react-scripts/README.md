@@ -60,3 +60,6 @@ Please refer to its documentation:
 - merged create-react-app/react-scripts 2.0.5
 - removed built-in support for styled-jsx
 - use the same template as the official one
+
+2.0.1
+- fix `injectBabelPlugin` and `injectModuleRule`
