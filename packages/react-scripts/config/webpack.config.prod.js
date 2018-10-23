@@ -75,6 +75,9 @@ const getStyleLoaders = (cssOptions, preProcessor) => {
       options: cssOptions,
     },
     {
+      loader: require.resolve('scoped-css-loader'),
+    },
+    {
       // Options for PostCSS as we reference these options twice
       // Adds vendor prefixing based on your specified browser support in
       // package.json
@@ -322,6 +325,7 @@ module.exports = {
               ]),
               // @remove-on-eject-end
               plugins: [
+                require.resolve('babel-plugin-react-scoped-css'),
                 [
                   require.resolve('babel-plugin-named-asset-import'),
                   {
@@ -382,7 +386,7 @@ module.exports = {
             test: cssRegex,
             exclude: cssModuleRegex,
             loader: getStyleLoaders({
-              importLoaders: 1,
+              importLoaders: 2,
               sourceMap: shouldUseSourceMap,
             }),
             // Don't consider CSS imports dead code even if the
@@ -396,7 +400,7 @@ module.exports = {
           {
             test: cssModuleRegex,
             loader: getStyleLoaders({
-              importLoaders: 1,
+              importLoaders: 2,
               sourceMap: shouldUseSourceMap,
               modules: true,
               localIdentName: scopedClassName,
@@ -412,7 +416,7 @@ module.exports = {
             exclude: sassModuleRegex,
             loader: getStyleLoaders(
               {
-                importLoaders: 2,
+                importLoaders: 3,
                 sourceMap: shouldUseSourceMap,
               },
               'sass-loader'
@@ -429,7 +433,7 @@ module.exports = {
             test: sassModuleRegex,
             loader: getStyleLoaders(
               {
-                importLoaders: 2,
+                importLoaders: 3,
                 sourceMap: shouldUseSourceMap,
                 modules: true,
                 localIdentName: scopedClassName,
@@ -478,7 +482,8 @@ module.exports = {
     }),
     // Inlines the webpack runtime script. This script is too small to warrant
     // a network request.
-    shouldInlineRuntimeChunk && new InlineChunkHtmlPlugin(HtmlWebpackPlugin, [/runtime~.+[.]js/]),
+    shouldInlineRuntimeChunk &&
+      new InlineChunkHtmlPlugin(HtmlWebpackPlugin, [/runtime~.+[.]js/]),
     // Makes some environment variables available in index.html.
     // The public URL is available as %PUBLIC_URL% in index.html, e.g.:
     // <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">

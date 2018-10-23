@@ -1,6 +1,6 @@
 {
   "name": "@gxl/react-scripts",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "description": "A configurable version of create react app",
   "repository": "gaoxiaoliangz/create-react-app",
   "license": "MIT",
@@ -29,6 +29,7 @@
     "babel-jest": "23.6.0",
     "babel-loader": "8.0.4",
     "babel-plugin-named-asset-import": "^0.2.2",
+    "babel-plugin-react-scoped-css": "^0.1.2",
     "babel-preset-react-app": "^5.0.4",
     "bfj": "6.1.1",
     "case-sensitive-paths-webpack-plugin": "2.1.2",
@@ -61,6 +62,7 @@
     "react-dev-utils": "^6.0.5",
     "resolve": "1.8.1",
     "sass-loader": "7.1.0",
+    "scoped-css-loader": "^0.1.2",
     "style-loader": "0.23.0",
     "terser-webpack-plugin": "1.1.0",
     "url-loader": "1.1.1",
