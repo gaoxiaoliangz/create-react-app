@@ -77,3 +77,7 @@ Please refer to its documentation:
   2.1.0
 
 - add support for scoped css, check [gaoxiaoliangz/react-scoped-css](https://github.com/gaoxiaoliangz/react-scoped-css) for detail
+
+  2.2.0
+
+- update scoped css packages
