@@ -89,3 +89,7 @@ Please refer to its documentation:
 ### 2.2.2
 
 - merged create-react-app/react-scripts 2.0.5
+
+### 2.2.3
+
+- update scoped-css packages
