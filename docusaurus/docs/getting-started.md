@@ -16,7 +16,7 @@ npm start
 
 _([npx](https://medium.com/@maybekatz/introducing-npx-an-npm-package-runner-55f7d4bd282b) comes with npm 5.2+ and higher, see [instructions for older npm versions](https://gist.github.com/gaearon/4064d3c23a77c74a3614c498a8bb1c5f))_
 
-Then open [http://localhost:3000/](http://localhost:3000/) to see your app. 
+Then open [http://localhost:3000/](http://localhost:3000/) to see your app.
 
 When you’re ready to deploy to production, create a minified bundle with `npm run build`.
 
@@ -62,7 +62,7 @@ _`yarn create` is available in Yarn 0.25+_
 
 ## Output
 
-Running amy of these commands will create a directory called `my-app` inside the current folder. Inside that directory, it will generate the initial project structure and install the transitive dependencies:
+Running any of these commands will create a directory called `my-app` inside the current folder. Inside that directory, it will generate the initial project structure and install the transitive dependencies:
 
 ```
 my-app
