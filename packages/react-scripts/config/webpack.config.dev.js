@@ -16,7 +16,7 @@ const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
 const InterpolateHtmlPlugin = require('react-dev-utils/InterpolateHtmlPlugin');
 const WatchMissingNodeModulesPlugin = require('react-dev-utils/WatchMissingNodeModulesPlugin');
 const ModuleScopePlugin = require('react-dev-utils/ModuleScopePlugin');
-const getCSSModuleLocalIdent = require('react-dev-utils/getCSSModuleLocalIdent');
+// const getCSSModuleLocalIdent = require('react-dev-utils/getCSSModuleLocalIdent');
 const getClientEnvironment = require('./env');
 const paths = require('./paths');
 const ManifestPlugin = require('webpack-manifest-plugin');
@@ -24,6 +24,8 @@ const ModuleNotFoundPlugin = require('react-dev-utils/ModuleNotFoundPlugin');
 // @remove-on-eject-begin
 const getCacheIdentifier = require('react-dev-utils/getCacheIdentifier');
 // @remove-on-eject-end
+
+const scopedClassName = '[local]--[hash:base64:5]';
 
 // Webpack uses `publicPath` to determine where the app is being served from.
 // In development, we always serve from the root. This makes config easier.
@@ -49,6 +51,7 @@ const getStyleLoaders = (cssOptions, preProcessor) => {
       loader: require.resolve('css-loader'),
       options: Object.assign({}, cssOptions, {
         sourceMap: true,
+        localIdentName: scopedClassName,
       }),
     },
     {
@@ -324,7 +327,7 @@ module.exports = {
             use: getStyleLoaders({
               importLoaders: 2,
               modules: true,
-              getLocalIdent: getCSSModuleLocalIdent,
+              // getLocalIdent: getCSSModuleLocalIdent,
             }),
           },
           // Opt-in support for SASS (using .scss or .sass extensions).
@@ -345,7 +348,7 @@ module.exports = {
               {
                 importLoaders: 3,
                 modules: true,
-                getLocalIdent: getCSSModuleLocalIdent,
+                // getLocalIdent: getCSSModuleLocalIdent,
               },
               'sass-loader'
             ),

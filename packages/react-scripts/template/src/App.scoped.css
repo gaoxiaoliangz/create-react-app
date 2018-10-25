@@ -18,7 +18,7 @@
   color: white;
 }
 
-.App-link {
+.App /deep/ :local(.App-link) {
   color: #61dafb;
 }
 

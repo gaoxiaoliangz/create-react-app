@@ -72,7 +72,9 @@ const getStyleLoaders = (cssOptions, preProcessor) => {
     },
     {
       loader: require.resolve('css-loader'),
-      options: cssOptions,
+      options: Object.assign({}, cssOptions, {
+        localIdentName: scopedClassName,
+      }),
     },
     {
       loader: require.resolve('scoped-css-loader'),
@@ -403,7 +405,6 @@ module.exports = {
               importLoaders: 2,
               sourceMap: shouldUseSourceMap,
               modules: true,
-              localIdentName: scopedClassName,
             }),
           },
           // Opt-in support for SASS. The logic here is somewhat similar
@@ -436,7 +437,6 @@ module.exports = {
                 importLoaders: 3,
                 sourceMap: shouldUseSourceMap,
                 modules: true,
-                localIdentName: scopedClassName,
               },
               'sass-loader'
             ),

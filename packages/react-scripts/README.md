@@ -23,61 +23,65 @@ Please refer to its documentation:
 
 ## Changelog
 
-1.1.8
+### 1.1.8
 
 - scss support
 - @ alias
 - css/scss source map
 
-  1.2.0
+### 1.2.0
 
 - css modules(\*.module.(s)css)
 - update readme
 - update template code using css modules
 
-  1.3.5
+### 1.3.5
 
 - add config.js to customize webpack and dev server
 
-  1.3.8
+### 1.3.8
 
 - merged create-react-app/react-scripts 1.1.5
 
-  1.4.2
+### 1.4.2
 
 - add babel-plugin-react-css-modules
 - template uses styleName
 
-  1.4.3
+### 1.4.3
 
 - remove babel-plugin-react-css-modules
 - add styled jsx
 - update template to use styled jsx
 - update readme
 
-  1.4.4
+### 1.4.4
 
 - add util function `injectBabelPlugin`, `injectModuleRule` and `injectWebpackPlugin`
 - add react-hot-loader
 
-  1.4.6
+### 1.4.6
 
 - fixed an issue with `output.path`
 
-  2.0.0
+### 2.0.0
 
 - merged create-react-app/react-scripts 2.0.5
 - removed built-in support for styled-jsx
 - use the same template as the official one
 
-  2.0.1
+### 2.0.1
 
 - fix `injectBabelPlugin` and `injectModuleRule`
 
-  2.1.0
+### 2.1.0
 
 - add support for scoped css, check [gaoxiaoliangz/react-scoped-css](https://github.com/gaoxiaoliangz/react-scoped-css) for detail
 
-  2.2.0
+### 2.2.0
 
 - update scoped css packages
+
+### 2.2.1
+
+- change css-modules localIdentName
