@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.2.6
+
+- synced tag react-scripts@@2.1.1
+
 ## 2.2.5
 
 - update react-scoped-css packages
@@ -14,7 +18,7 @@
 
 ## 2.2.2
 
-- merged latest master
+- synced latest master
 
 ## 2.2.1
 
@@ -34,7 +38,7 @@
 
 ## 2.0.0
 
-- merged create-react-app/react-scripts 2.0.5
+- synced create-react-app/react-scripts 2.0.5
 - removed built-in support for styled-jsx
 - use the same template as the official one
 
@@ -61,7 +65,7 @@
 
 ## 1.3.8
 
-- merged create-react-app/react-scripts 1.1.5
+- synced create-react-app/react-scripts 1.1.5
 
 ## 1.3.5
 
